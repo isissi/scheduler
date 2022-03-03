@@ -18,8 +18,6 @@ export function getInterview (state, interview) {
     return null;
   }
 
-  // return state.interviewers;
-
   return {
     student: interview.student, 
     interviewer: Object.values(state.interviewers).filter(interviewer => interview.interviewer === interviewer.id)[0]
