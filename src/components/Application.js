@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "components/Application.scss";
-import DayListItem from "./DayListItem";
 import DayList from "./DayList";
 import Appointment from "./Appointment";
 import axios from 'axios';
@@ -13,6 +12,33 @@ export default function Application(props) {
     appointments: {}, 
     interviewers: {}
   })
+
+  function bookInterview(id, interview) {
+    console.log(id, interview);
+    const appointment = {
+      ...state.appointments[id],
+      interview: { ...interview }
+    };
+  
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+    setState({...state, appointments})
+  }
+
+  function cancelInterview(id) {
+    const appointment = {
+      ...state.appointments[id],
+      interview: null
+    };
+  
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+    setState({...state, appointments})
+  }
 
   const setDay = day => setState(prev => ({...prev, day }));
 
@@ -38,6 +64,8 @@ export default function Application(props) {
       {...appointment}
       interview={interview}
       interviewers={interviewers}
+      bookInterview={bookInterview}
+      cancelInterview={cancelInterview}
     />
     )
   })
@@ -67,7 +95,7 @@ export default function Application(props) {
       </section>
       <section className="schedule">
         {appointmentList}
-        <Appointment key='last' time='5pm' />
+        <Appointment key='last' time='5pm'/>
       </section>
     </main>
   );
