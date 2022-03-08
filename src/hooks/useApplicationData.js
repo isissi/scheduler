@@ -34,7 +34,7 @@ export default function useApplicationData () {
     let days = [...state.days];
 
     for (const d of days) {
-      if (d.name === state.day) {
+      if (d.name === state.day && !state.appointments[id].interview) {
         d.spots --;
       }
     }
