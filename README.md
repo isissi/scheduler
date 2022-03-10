@@ -44,3 +44,10 @@ npm run storybook
 - Node-sass
 - Prop-types
 - React-test-renderer
+
+## Screenshots
+(https://github.com/isissi/scheduler/blob/master/public/images/Screen%20Shot%202022-03-09%20at%207.13.53%20PM.png?raw=true)
+
+(https://github.com/isissi/scheduler/blob/master/public/images/Screen%20Shot%202022-03-09%20at%207.14.09%20PM.png?raw=true)
+
+(https://github.com/isissi/scheduler/blob/master/public/images/Screen%20Shot%202022-03-09%20at%207.14.24%20PM.png?raw=true)
