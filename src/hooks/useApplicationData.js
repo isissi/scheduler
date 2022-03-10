@@ -10,6 +10,7 @@ export default function useApplicationData () {
   );
   const setDay = day => setState(prev => ({...prev, day}));
 
+  //get multiple data from api using Pormise.all
   useEffect(() => {
     Promise.all([
       axios.get('/api/days'), 
@@ -20,6 +21,7 @@ export default function useApplicationData () {
     })
   }, [])
 
+  //book and interview by the interview id and the interview info
   function bookInterview(id, interview) {
     const appointment = {
       ...state.appointments[id],
@@ -43,7 +45,7 @@ export default function useApplicationData () {
     .then(() => setState({...state, appointments, days}))
   }
   
-
+//cancel an interview by the interview id
   function cancelInterview(id) {
     const appointment = {
       ...state.appointments[id],
@@ -64,7 +66,7 @@ export default function useApplicationData () {
     }
 
     return axios.delete(`/api/appointments/${id}`, appointment)
-    .then(( )=> setState({...state, appointments, days}))
+    .then(()=> setState({...state, appointments, days}))
   }
 
   return {state, setDay, bookInterview, cancelInterview};
