@@ -33,6 +33,7 @@ export default function useApplicationData () {
       [id]: appointment
     };
 
+    //update days when an interview is added
     let days = [...state.days];
 
     for (const d of days) {
@@ -56,6 +57,8 @@ export default function useApplicationData () {
       ...state.appointments,
       [id]: appointment
     };
+
+  //update days when a interview is canceled
 
     let days = [...state.days];
 
