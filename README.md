@@ -45,6 +45,12 @@ npm run storybook
 - Prop-types
 - React-test-renderer
 
+## API
+This app runs with scheduler-api: 
+https://github.com/isissi/scheduler-api
+
+Keep the scheduler server running & run the api at the same time.
+
 ## Screenshots
 ![select_day](https://github.com/isissi/scheduler/blob/master/public/images/Screen%20Shot%202022-03-09%20at%207.13.53%20PM.png?raw=true)
 
