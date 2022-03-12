@@ -1,3 +1,8 @@
+/**
+ * Returns appointments for day
+ * @param {*} state 
+ * @param {*} day 
+ */
 export function getAppointmentsForDay (state, day) {
   let appointmentArr = [];
 
@@ -13,6 +18,11 @@ export function getAppointmentsForDay (state, day) {
   return appointmentArr;
 }
 
+/**
+ * Returns interviews correspoind to interview id
+ * @param {*} state 
+ * @param {*} interview 
+ */
 export function getInterview (state, interview) {
   if (!interview) {
     return null;
@@ -24,6 +34,11 @@ export function getInterview (state, interview) {
   }
 }
 
+/**
+ * Returns an array of interviewer object of day
+ * @param {*} state 
+ * @param {*} day 
+ */
 export function getInterviewersForDay (state, day) {
   let interviewerArr = [];
   const list = state.days.filter(d => d.name === day)[0]; 
