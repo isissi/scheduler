@@ -10,7 +10,6 @@ export default function useVisualMode (initial) {
     } else {
     //Change history to a copy of the history with newMode at the end
       setHistory(prev => prev.slice(0, -1));
-      console.log(history);
       setHistory(prev => [...prev, addMode]);
     }
     setMode(addMode);
