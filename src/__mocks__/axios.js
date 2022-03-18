@@ -79,5 +79,11 @@ export default {
         data: fixtures.interviewers
       })
     }
+  }), 
+  put: jest.fu(() => {
+    return Promise.resolve({
+      status: 204, 
+      sstatusText: 'No Content'
+    })
   })
 }
