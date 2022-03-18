@@ -80,7 +80,7 @@ export default {
       })
     }
   }), 
-  put: jest.fu(() => {
+  put: jest.fn(() => {
     return Promise.resolve({
       status: 204, 
       sstatusText: 'No Content'
