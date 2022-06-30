@@ -1,5 +1,5 @@
 # Interview Scheduler
-Scheduler is a simle single page interview scheduler. 
+Scheduler is a simple single page interview scheduler. 
 
 User can select day, create a new interview, input their name, select a interviewer, save the appointment, edit or delete an existing appointment.
 ## Setup
